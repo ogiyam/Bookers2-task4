@@ -1,27 +1,27 @@
  <h2>User info</h2>
    <table class="table_user">
          <thead>
-           　<th>
-           　   <%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size: "100x100" %><br>
-          　 </th>
-         </thead>
-             <tbody>
+                <tr>
+             　     <th>
+           　        <%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size: "150x150" %><br>
+          　        </th>
+                </tr>
           　     <tr>
-             　    <th>name</th>
-             　    <th><%= user.name %></th>
+             　     <th>name</th>
+             　     <th><%= user.name %></th>
             　   </tr>
             　    <tr>
                 　 <th>introduction</th>
                 　 <th><%= user.introduction %></th>
             　    </tr>
             　    <tr>
-    　　　　　　　　　　　　　　<th>follows</th>
+            　      <th>follows</th>
    　　　　　　　　　　　　　　　 <th><%= link_to user.followings.count, user_followings_path(user) %></th>
  　　　　　　　　　　　　　　　 </tr>
                  <tr>
                    <th>followers</th>
                    <th><%= link_to user.followers.count, user_followers_path(user) %></th>
-             </tbody>
+             </thead>
          </table>
          <% if current_user != user %>
               <% if current_user.following?(user) %>
@@ -32,4 +32,3 @@
               <% else %>
                   <%= link_to '', edit_user_path(user), class:"fas fa-user-cog btn btn-outline-secondary btn-sm btn-block"  %>
          <% end %>
- 
