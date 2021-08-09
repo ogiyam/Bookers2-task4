@@ -1,17 +1,15 @@
 <div class="notice"><%= flash[:notice] %></div>
 
 <div class="container-fluid">
- <div class="row">
+  <div class="row">
      <div class="col-md-3">
           <%= render 'users/user', user: @user %>
          <h2>New book</h2>
           <%= render 'books/book', new_book: @new_book %>
      </div>
-
-
- <div class="col-md-8 offset-md-1">
+      <div class="col-md-8 offset-md-1">
         <h1>Book detail</h1>
- 　   　  <table class="table book-show">
+ 　     　  <table class="table book-show">
               <tbody>
                  <tr>
                  　  <td><%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpg", size: "50x50" %><br>
@@ -24,7 +22,7 @@
                    <% end %>
               　  </tr>
             　</tbody>
-        </table>
-  　</div>
+          </table>
+    　</div>
   </div>
  </div>

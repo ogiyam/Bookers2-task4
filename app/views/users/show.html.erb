@@ -1,16 +1,15 @@
 <div class="notice"><%= flash[:notice] %></div>
 
 <div class="container-fluid">
- <div class="row">
+   <div class="row">
      <div class="col-md-3">
           <%= render 'users/user', user: @user %>
          <h2>New book</h2>
           <%= render 'books/book', new_book: @new_book %>
      </div>
-
- <div class="col-md-8 offset-md-1">
-    <h1>Books</h1>
-    　　　<table class="table book-index">
+     <div class="col-md-8 offset-md-1">
+        <h1>Books</h1>
+    　　    　<table class="table book-index">
               <thead>
                  <tr>
                     <th></th>
@@ -32,7 +31,7 @@
                      </tr>
                    <% end %>
               </tbody>
-  　　　　  </table>
-　  </div>
-　</div>
+  　　    　　  </table>
+　   </div>
+ 　</div>
 </div>
